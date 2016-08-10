@@ -1,3 +1,9 @@
-.DS_Store
-/electron-app/main.js
-/scalajs/target
+electron-app/node_modules/
+electron-app/main.js
+target
+bin
+.classpath
+.project
+.settings
+*.log
+.cache-main
