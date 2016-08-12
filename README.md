@@ -6,9 +6,8 @@ This is an example of how to use Scala.js together with Electron to build native
 ## Getting started
 Get started, enter the scalajs subfolder, start sbt and launch the fastOptJS task
 ``` bash
-cd scalajs
 sbt
-sbt> ~electronMain
+sbt> electronMain
 ```
 
 Then you will need to get Electron [downloaded](https://github.com/atom/electron/releases)  on your machine.
