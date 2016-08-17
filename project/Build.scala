@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 
 object ElectronServerBuild extends Build {
-	override lazy val settings = super.settings ++ Seq(organization := "com.azdes",
+	override lazy val settings = super.settings ++ Seq(organization := "azdes",
 														version := "0.1-SNAPSHOT",
 														scalaVersion := "2.11.8"
 													)
