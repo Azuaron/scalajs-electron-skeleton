@@ -20,7 +20,7 @@ object Main extends App {
   implicit val executionContext = system.dispatcher
   implicit val timeout = Timeout(10.seconds)
 
-  val api = system.actorOf(Props(new RestInterface))
+  val api = system.actorOf(Props(RestInterface.make))
 
   IO(Http).ask(Http.Bind(listener = api, interface = host, port = port))
     .mapTo[Http.Event]
@@ -28,8 +28,7 @@ object Main extends App {
       case Http.Bound(address) =>
         println(s"REST interface bound to $address")
       case Http.CommandFailed(cmd) =>
-        println("REST interface could not bind to " +
-          s"$host:$port, ${cmd.failureMessage}")
+        println("REST interface could not bind to $host:$port, ${cmd.failureMessage}")
         system.terminate()
     }
 }

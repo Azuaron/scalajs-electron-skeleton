@@ -2,12 +2,12 @@ package azdes.electriserver.resources
 
 import azdes.electriserver.entities.{MyThingUpdate, MyThing}
 import azdes.electriserver.routing.MyHttpService
-import azdes.electriserver.services.MyThingService
+import azdes.electriserver.services.MyThingCrudService
 import spray.routing._
 
 trait MyThingResource extends MyHttpService {
 
-  val myThingService: MyThingService
+  val myThingService: MyThingCrudService
 
   def myThingRoutes: Route = pathPrefix("my-things") {
     pathEnd {

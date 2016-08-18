@@ -22,6 +22,7 @@ object CustomSerializers {
   val all = List(CustomTimestampSerializer)
 }
 
+
 case object CustomTimestampSerializer extends CustomSerializer[Timestamp](format =>
   ({
     case JInt(x) => new Timestamp(x.longValue * 1000)

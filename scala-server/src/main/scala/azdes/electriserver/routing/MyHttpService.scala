@@ -25,5 +25,4 @@ trait MyHttpService extends HttpService with JsonSupport {
         complete(status, None)
       }
     }
-
 }

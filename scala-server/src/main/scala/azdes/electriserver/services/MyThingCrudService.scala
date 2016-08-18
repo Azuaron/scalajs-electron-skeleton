@@ -4,7 +4,7 @@ import azdes.electriserver.entities.{MyThing, MyThingUpdate}
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class MyThingService(implicit val executionContext: ExecutionContext) {
+class MyThingCrudService(implicit val executionContext: ExecutionContext) {
 
   var myThings = Vector.empty[MyThing]
 
