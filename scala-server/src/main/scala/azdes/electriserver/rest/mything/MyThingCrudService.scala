@@ -1,7 +1,6 @@
-package azdes.electriserver.rest.services
+package azdes.electriserver.rest.mything
 
 import scala.concurrent.{ExecutionContext, Future}
-
 import azdes.electriserver.rest.entities.{MyThing, MyThingUpdate}
 
 class MyThingCrudService(implicit val executionContext: ExecutionContext) {
