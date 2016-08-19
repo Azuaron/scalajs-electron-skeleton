@@ -1,8 +1,8 @@
-package azdes.electriserver.services
-
-import azdes.electriserver.entities.{MyThing, MyThingUpdate}
+package azdes.electriserver.rest.services
 
 import scala.concurrent.{ExecutionContext, Future}
+
+import azdes.electriserver.rest.entities.{MyThing, MyThingUpdate}
 
 class MyThingCrudService(implicit val executionContext: ExecutionContext) {
 
@@ -22,7 +22,6 @@ class MyThingCrudService(implicit val executionContext: ExecutionContext) {
   }
 
   def updateMyThing(id: String, update: MyThingUpdate): Future[Option[MyThing]] = {
-
     def updateEntity(myThing: MyThing): MyThing = {
       val title = update.title.getOrElse(myThing.title)
       val text = update.text.getOrElse(myThing.text)
@@ -31,7 +30,7 @@ class MyThingCrudService(implicit val executionContext: ExecutionContext) {
 
     getMyThing(id).flatMap { maybeMyThing =>
       maybeMyThing match {
-        case None => Future { None } // No question found, nothing to update
+        case None => Future { None } // Nothing found, so that's what we update
         case Some(myThing) =>
           val updatedMyThing = updateEntity(myThing)
           deleteMyThing(id).flatMap { _ =>
@@ -45,4 +44,3 @@ class MyThingCrudService(implicit val executionContext: ExecutionContext) {
     myThings = myThings.filterNot(_.id == id)
   }
 }
-

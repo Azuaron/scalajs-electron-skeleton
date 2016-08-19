@@ -1,9 +1,8 @@
-package azdes.electriserver
+package azdes.electriserver.rest
 
-import azdes.electriserver.resources.MyThingResource
-import azdes.electriserver.services.MyThingCrudService
+import azdes.electriserver.rest.resources.MyThingResource
+import azdes.electriserver.rest.services.MyThingCrudService
 import spray.routing._
-
 import scala.concurrent.ExecutionContext
 import scala.language.postfixOps
 

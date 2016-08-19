@@ -1,6 +1,6 @@
-package azdes.electriserver.http
+package azdes.electriserver.rest.http
 
-import azdes.electriserver.serializers.JsonSupport
+import azdes.electriserver.rest.serializers.JsonSupport
 import spray.http.HttpHeaders
 import spray.routing._
 

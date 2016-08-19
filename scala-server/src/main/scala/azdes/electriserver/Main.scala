@@ -8,6 +8,7 @@ import com.typesafe.config.ConfigFactory
 import spray.can.Http
 
 import scala.concurrent.duration._
+import azdes.electriserver.rest.RestInterface
 
 object Main extends App {
   //val config = ConfigFactory.load()

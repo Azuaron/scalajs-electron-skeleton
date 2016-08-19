@@ -1,4 +1,4 @@
-package azdes.electriserver.serializers
+package azdes.electriserver.rest.serializers
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

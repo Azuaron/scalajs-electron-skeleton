@@ -1,8 +1,8 @@
-package azdes.electriserver.resources
+package azdes.electriserver.rest.resources
 
-import azdes.electriserver.entities.{MyThingUpdate, MyThing}
-import azdes.electriserver.http.MyHttpService
-import azdes.electriserver.services.MyThingCrudService
+import azdes.electriserver.rest.entities.{MyThingUpdate, MyThing}
+import azdes.electriserver.rest.http.MyHttpService
+import azdes.electriserver.rest.services.MyThingCrudService
 import spray.routing._
 
 trait MyThingResource extends MyHttpService {
