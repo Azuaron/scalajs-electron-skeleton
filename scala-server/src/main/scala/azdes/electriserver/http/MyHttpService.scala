@@ -1,4 +1,4 @@
-package azdes.electriserver.routing
+package azdes.electriserver.http
 
 import azdes.electriserver.serializers.JsonSupport
 import spray.http.HttpHeaders

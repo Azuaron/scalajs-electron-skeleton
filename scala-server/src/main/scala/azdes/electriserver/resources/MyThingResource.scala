@@ -1,7 +1,7 @@
 package azdes.electriserver.resources
 
 import azdes.electriserver.entities.{MyThingUpdate, MyThing}
-import azdes.electriserver.routing.MyHttpService
+import azdes.electriserver.http.MyHttpService
 import azdes.electriserver.services.MyThingCrudService
 import spray.routing._
 
