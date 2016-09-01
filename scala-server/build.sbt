@@ -6,26 +6,19 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf
 
 //spray
 libraryDependencies ++= {
-  val akkaV = "2.4.9-RC2"
+  val akkaV = "2.4.9"
   val sprayV = "1.3.3"
   val json4sV = "3.4.0"
   Seq(
-    "io.spray"            %%  "spray-can"     % sprayV,
-    "io.spray"            %%  "spray-routing" % sprayV,
-    "io.spray"            %%  "spray-testkit" % sprayV  % "test",
     "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
     "com.typesafe.akka"   %%  "akka-slf4j"    % akkaV,
+    "com.typesafe.akka"   %%  "akka-http-experimental"  % akkaV,
+    "com.typesafe.akka"   %%  "akka-http-spray-json-experimental"  % akkaV,
     "com.typesafe.akka"   %%  "akka-testkit"  % akkaV   % "test",
     "org.specs2"          %%  "specs2-core"   % "2.3.11" % "test",
     "org.json4s" %% "json4s-native" % json4sV,
     "org.json4s" %% "json4s-ext" % json4sV
   )
-}
-// Dependency Injection
-libraryDependencies ++= {
-	val guiceV = "4.1.0"
-	Seq("com.google.inject" % "guice" % guiceV,
-		"net.codingwell" %% "scala-guice" % guiceV)
 }
 
 Revolver.settings

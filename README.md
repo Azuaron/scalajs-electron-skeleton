@@ -1,7 +1,7 @@
 Scala.js & Electron Skeleton
 ============================
 
-This is an example of how to use Scala.js together with Electron to build native applications with a Jetty backend.
+This is an example of how to use Scala.js together with Electron to build native applications with an akka backend.
 
 ## Getting started
 Get started, enter the scalajs subfolder, start sbt and launch the fastOptJS task
@@ -37,6 +37,6 @@ If for some reason, you don't want the `main.js` to come from Scala.js, see the 
 The javascript code loaded from within the rendered process (i.e. `index.html`) is implemented in [com.example.electronapp.Renderer.scala](https://github.com/bchazalet/scalajs-electron-skeleton/blob/master/scalajs/src/main/scala/com/example/electronapp/Renderer.scala) and uses the `JSExport` annotation to be callable from javascript and its main method is explicitly called from within `index.html`.
 
 ## Copyright
-Copyright © 2016 Sam Brougher (based on work by Boris Chazalet)
+Copyright © 2016 Sam Brougher (based on work by Boris Chazalet).
 
 This work is free and in the public domain. You can redistribute it and/or modify it under the terms of the Unlicense. See the LICENSE file for more details.
