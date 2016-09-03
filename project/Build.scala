@@ -24,8 +24,6 @@ object ElectronServerBuild extends Build {
 }
 
 object ElectronCommands {
-	import complete.DefaultParsers._
-	
 	def electronStart = Command.single("electronStart") {
 		case (state, "win32") =>
 			val success = "./electron-app/node_modules/.bin/electron.cmd electron-app" ! ;

@@ -7,3 +7,4 @@ bin
 .settings
 *.log
 .cache-main
+.idea
