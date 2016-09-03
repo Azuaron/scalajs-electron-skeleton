@@ -1,4 +1,4 @@
-package azuaron.electriserver.rest.mything
+package azuaron.electriserver.api
 
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import spray.json.DefaultJsonProtocol

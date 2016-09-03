@@ -1,6 +1,7 @@
 package azuaron.electriserver.rest.mything
 
 import scala.concurrent.{ExecutionContext, Future}
+import azuaron.electriserver.api.{MyThing, MyThingUpdate}
 
 trait MyThingCrudComponent {
   val myThingCrud: MyThingCrud
