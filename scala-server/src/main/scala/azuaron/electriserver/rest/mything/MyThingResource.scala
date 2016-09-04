@@ -2,9 +2,10 @@ package azuaron.electriserver.rest.mything
 
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.model.StatusCodes._
-import azuaron.electriserver.api.{MyThing, MyThingJsonSupport, MyThingUpdate}
+import azuaron.electriserver.api.{MyThing, MyThingUpdate}
+import de.heikoseeberger.akkahttpupickle.UpickleSupport
 
-trait MyThingResource extends MyThingCrudComponentImpl with MyThingJsonSupport {
+trait MyThingResource extends MyThingCrudComponentImpl with UpickleSupport {
 
   val myThingRoutes = pathPrefix("my-thing") {
     pathEnd {

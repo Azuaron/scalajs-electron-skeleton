@@ -4,12 +4,13 @@ enablePlugins(ScalaJSPlugin)
 
 name := "Scala.js Electron Skeleton"
 
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.1"
-libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.9.0"
-libraryDependencies += "org.webjars" % "jquery" % "3.1.0"
+libraryDependencies += "com.lihaoyi" %%% "upickle" % "0.4.1" //Full rights, custom license? MIT? Who knows!
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.1" //Scala License
+libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.9.0" //Scala License
+libraryDependencies += "org.webjars" % "jquery" % "3.1.0" //MIT License
 
 jsDependencies += RuntimeDOM
-jsDependencies += "org.webjars" % "jquery" % "3.1.0" / "3.1.0/jquery.js"
+jsDependencies += "org.webjars" % "jquery" % "3.1.0" / "3.1.0/jquery.js" //MIT License
 
 scalacOptions += "-deprecation"
 scalacOptions += "-feature"

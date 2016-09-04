@@ -1,12 +1,15 @@
 package azuaron.electriserver.api
 
-import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-import spray.json.DefaultJsonProtocol
-
 case class MyThing(id: String, title: String, text: String)
 case class MyThingUpdate(title: Option[String], text: Option[String])
 
-trait MyThingJsonSupport extends DefaultJsonProtocol with SprayJsonSupport {
-  implicit val myThingFormat = jsonFormat3(MyThing)
-  implicit val myThingUpdateFormat = jsonFormat2(MyThingUpdate)
+/**
+ * Not strictly necessary, but speeds up compilation/runtime.
+ */
+object MyThing {
+  implicit val pkl = upickle.default.macroRW[MyThing]
+}
+
+object MyThingUpdate {
+  implicit val pkl = upickle.default.macroRW[MyThingUpdate]
 }
